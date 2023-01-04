@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
 import FlexWrapper from '../FlexWrapper/FlexWrapper';
 import Item from "../Item/Item";
 
 function ItemListContainer() {
+  const [toggle, setToggle] = useState(false);
+
+  console.log("%cRenderizando ItemListContainer...", "background-color: blue");
+
+  useEffect(
+    () => {
+      console.log("%cObteniendo items de la base de datos", "background-color: green");
+    }, []);
+ 
+
   const productoA = {
     title: "Collar",
     price: 450,
@@ -33,6 +43,7 @@ function ItemListContainer() {
             imgurl="/Assets/img/arnes.png"
         />
     </FlexWrapper>
+    <button onClick={ () => setToggle(!toggle)}>Toggle State</button>
   </>
   );
 }
