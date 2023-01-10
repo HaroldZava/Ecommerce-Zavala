@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./item.css";
 
 import {ButtonChild} from "../Button/Button";
@@ -9,7 +9,7 @@ function Item({title, price, detail, imgurl}) {
 
   return (
     <div className='item-card'>
-        <ToggleButton icon="💛"/>
+        <ToggleButton icon="♥"/>
         <div className='item-card_header'>
             <h2>{title}</h2>
         </div>
@@ -25,4 +25,4 @@ function Item({title, price, detail, imgurl}) {
   );
 }
 
-export default Item
+export default Item;
