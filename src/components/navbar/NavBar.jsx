@@ -6,23 +6,23 @@ function NavBar() {
             <ul className="nav-menu">
                 <h2>
                     <li>
-                        <a href="/">Perrito Pituco</a>
+                        <Link to="/">Perrito Pituco</Link>
                     </li>
                 </h2>
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/">
                         Collar
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/">
                         Pechera
-                    </a>
+                    </Link>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/">
                         Arnes
-                    </a>
+                    </Link>
                 </li>
 
                 {/* <CartWidget/> */}

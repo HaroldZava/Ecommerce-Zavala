@@ -7,20 +7,29 @@ import itemList from "../ItemList/ItemList";
 function ItemListContainer() {
   const [product, setProduct]  = useState([]);
 
-  console.log("Renderizamos el componente...");
 
-  useEffect( () => {
-    getItems().then((respuesta) => {
-      console.log(respuesta)
-      setProduct(respuesta)
-    });
-   }, [] )
-  
+
+  let idcategory = "arnes";
+
+  useEffect(() => {
+    if (idcategory) {
+      getItemsByCategory(idcategory).then((respuesta) => {
+        console.log(respuesta);
+        setProduct(respuesta);
+      });
+    } else {
+      getItems().then((respuesta) => {
+        console.log(respuesta);
+        setProduct(respuesta);
+      });
+    }
+  }, []);
+
   return (
-  <>
-    <itemList product={product} />
-  </>
-  );  
+    <>
+      <itemList product={product} />
+    </>
+  );
 }
 
 export default ItemListContainer;
